@@ -2,13 +2,13 @@ Ce projet est un exercice/devoir en C++ visant à implementer et tester des fonc
 Il couvre des opérations comme la copie, la concatenation, la recherche de caracteres, la division de chaînes, la gestion de la memoire, la comparaison alphabetique, la conversion en minuscules et la vérification de chaînes numériques.
 
 # Fonctions implementees et exemples
-1. LongueurChaine(const char* chaine):
+1.**LongueurChaine**(const char* chaine):
 
    calcule le nombre de caracteres dans une chaine
 
    **exemple**:LongueurChaine("Bonjoure"); le resultat seras : 8
 
-2.CopierChaine(char* destination, const char* source):
+2.**CopierChaine**(char* destination, const char* source):
 
 copie le contenu de source dans destination.
 Elle sert à copier le contenu d’une chaîne de caractères dans une autre.
@@ -16,7 +16,7 @@ Elle sert à copier le contenu d’une chaîne de caractères dans une autre.
 **exemple**:char copie[50];
 CopierChaine(copie, "herve"); la copie devient "herve".
 
-3.ConcatenerChaines(char* destination, const char* source):
+3.**ConcatenerChaines**(char* destination, const char* source):
 
 Ajoute source à la fin de destination, cet a dire, elle sert a ajouter une chaine de caracteres a la fin d'une autre.
 
@@ -24,7 +24,7 @@ Ajoute source à la fin de destination, cet a dire, elle sert a ajouter une chai
 ConcatenerChaines(phrase, "Gabriel");
 std::cout << phrase; // Affiche : Herve Gabriel!
 
-4.TrouverCaractere(const char* chaine, char caractere):
+4.**TrouverCaractere**(const char* chaine, char caractere):
 
 Cette fonction sert à chercher un caractere precis dans une chaîne de caracteres
 Elle retourne un pointeur vers la première position où ce caractère apparaît.
@@ -32,13 +32,13 @@ Elle retourne un pointeur vers la première position où ce caractère apparaît
 
 **exemple**:char* position = TrouverCaractere("jacob", 'j'); // position pointe sur 'j'
 
-5. CompterOccurrences(const char* chaine, char caractere):
+5.**CompterOccurrences**(const char* chaine, char caractere):
 
    Compte combien de fois un caractere apparaît dans la chaîne.
 
-    **exemple**:CompterOccurrences("Banane", 'a'); // Résultat : 2
+   **exemple**:CompterOccurrences("Banane", 'a'); // Résultat : 2
 
-7. ExtraireSousChaine(char* destination, const char* source, size_t debut, size_t longueur):
+**7.** **ExtraireSousChaine**(char* destination, const char* source, size_t debut, size_t longueur):
 
    Cette fonction permet d’extraire une portion d’une chaîne de caracteres, à partir d’un indice de départ (debut) et sur une longueur donner (longueur). Elle copie cette portion dans une autre chaîne appelée destination.
 
@@ -46,7 +46,7 @@ Elle retourne un pointeur vers la première position où ce caractère apparaît
     **exemple**:char extrait[20];
 ExtraireSousChaine(extrait, "Sangoku", 0, 4); // extrait devient "San", la fin est exclusive.
 
-9. CopierMemoire(void* destination, const void* source, size_t taille):
+**9. CopierMemoire**(void* destination, const void* source, size_t taille):
 
    Copie un bloc memoire de source vers destination.
 
@@ -55,24 +55,22 @@ ExtraireSousChaine(extrait, "Sangoku", 0, 4); // extrait devient "San", la fin e
                char zone2[10];
              CopierMemoire(zone2, zone1, 3); // zone2 contient "hey".
    
-11. InitialiserMemoire(void* zone, unsigned char valeur, size_t taille):
+**10. InitialiserMemoire**(void* zone, unsigned char valeur, size_t taille):
 
-    Remplit une zone memoire avec une valeur donnée.
-
-
-    **exemple**:char zone[10];
+ Remplit une zone memoire avec une valeur donnée.
+**exemple**:char zone[10];
    InitialiserMemoire(zone, 'W', 3); // zone contient "WWW"
 
-13. ComparerChaines(const char* chaine1, const char* chaine2):
+**11. ComparerChaines**(const char* chaine1, const char* chaine2):
 
-    Compare deux chaînes caractere par caractere.
-    Cette fonction compare deux chaînes de caractères (chaine1 et chaine2) caractère par caractère. Elle retourne :
+   Compare deux chaînes caractere par caractere.
+    Cette fonction compare deux chaînes de caracteres (chaine1 et chaine2) caractere par caractere. Elle retourne :
 
-0 si les deux chaînes sont identiques
+ - 0 si les deux chaînes sont identiques
 
- Un nombre positif si chaine1 est plus grande (lexicographiquement)
+- Un nombre positif si chaine1 est plus grande (lexicographiquement)
 
- Un nombre négatif si chaine1 est plus petite
+- Un nombre négatif si chaine1 est plus petite
 
 C’est l’équivalent de la fonction standard strcmp() en C.
     
@@ -80,16 +78,16 @@ C’est l’équivalent de la fonction standard strcmp() en C.
 ComparerChaines("wxy", "wxy"); // Résultat : 0
 
     
-12. ConvertirMinuscules(char* chaine):
+**12. ConvertirMinuscules**(char* chaine):
 
-    Transforme toutes les lettres majuscules en minuscules.
+  Transforme toutes les lettres majuscules en minuscules.
 
-     **exemples**:char texte[] = "CHANGER";
+   **exemples**:char texte[] = "CHANGER";
 ConvertirMinuscules(texte); // texte devient "changer"
 
-14. EstChaineNumerique(const char* chaine):
+**14. EstChaineNumerique**(const char* chaine):
 
-    Vérifie si une chaîne représente un nombre entier
+   Vérifie si une chaîne représente un nombre entier
  * chaine: Chaîne à vérifier (constante)
  * return: true si la chaîne est numérique, false sinon
  * 
