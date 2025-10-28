@@ -22,7 +22,7 @@ Ajoute source à la fin de destination, cet a dire, elle sert a ajouter une chai
 
 **exemple**:char phrase[100] = "Herve "; //l'espace est la pour que les deux mots ne colle pas
 ConcatenerChaines(phrase, "Gabriel");
-std::cout << phrase; // Affiche : Hello World!
+std::cout << phrase; // Affiche : Herve Gabriel!
 
 4.TrouverCaractere(const char* chaine, char caractere):
 
